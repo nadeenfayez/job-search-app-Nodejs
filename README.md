@@ -57,3 +57,40 @@ This particular app describes searching for a job that is relevant to their dom
   <li>userResume (must be pdf, upload this pdf on cloudinary)</li>
   <li>companyId</li>
 </ol>
+
+<h1>User APIs</h1>
+<ol>
+  <li>Sign Up</li>
+  <li>Sign In</li>
+    <ul>
+      <li>Sign In using (email or mobileNumber) and password</li>
+      <li>Don’t forget to update the status to online after SignIn</li>
+    </ul>
+  <li>Verify email</li>
+  <li>Verify recovery email</li>
+  <li>Update account</li>
+    <ul>
+      <li>You can update (email, mobileNumber, recoveryEmail, DOB, lastName, firstName)</li>
+      <li>If user update the email, mobileNumber make sure that the new data doesn’t conflict with any existing data in your database</li>
+      <li>User must be logged in</li>
+      <li>Only the owner of the account can update his account data</li>
+    </ul>
+  <li>Delete account</li>
+    <ul>
+      <li>Only the owner of the account can delete his account data</li>
+      <li>User must be logged in</li>
+    </ul>
+  <li>Get user account data</li>
+    <ul>
+      <li>Only the owner of the account can delete his account data</li>
+      <li>User must be logged in</li>
+    </ul>
+  <li>Get profile data for another user</li>
+    <ul>
+      <li>Send the userId in params or query</li>
+    </ul>
+  <li>Update password</li>
+  <li>Reset password</li>
+  <li>Forget password (without sending any email, make sure of your data security specially the OTP and the newPassword)</li>
+  <li>Get all accounts associated to a specific recovery Email</li>
+</ol>
