@@ -1,0 +1,1068 @@
+{
+	"info": {
+		"_postman_id": "f624000a-41dc-49e7-9308-828a835d6506",
+		"name": "job_search_app",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "32054863"
+	},
+	"item": [
+		{
+			"name": "User",
+			"item": [
+				{
+					"name": "Sign up",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\"firstName\": \" Nada \", \"lastName\": \"Sakr\", \"email\": \"nadasakr@gmail.com\", \"password\": \"nadaSakr0000@\", \"confirmedPassword\": \"nadaSakr0000@\", \"recoveryEmail\": \"sakrnada@yahoo.com\", \"DOB\": \"2001-04-01\", \"mobileNumber\": \"01033404010\", \"role\": \"User\"}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:4200/api/v1/user/signUp",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "4200",
+							"path": [
+								"api",
+								"v1",
+								"user",
+								"signUp"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Sign in",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\"mobileNumber\": \"01033404018\", \"password\": \"nadaSakr0000@\"}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:4200/api/v1/user/signIn",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "4200",
+							"path": [
+								"api",
+								"v1",
+								"user",
+								"signIn"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update account",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NWYxMWU3MTE2YThjN2VkMTEzN2EyMmEiLCJpYXQiOjE3MTAzMDA5MTIsImV4cCI6MTcxMDMwNDUxMn0.U-63QTB1SAUmB95ndvBmjzwSP6Qfp5QY215lvR1Q4Fw",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\"lastName\": \"Sakr\", \"recoveryEmail\": \"sakrnadaa@yahoo.com\", \"DOB\": \"2001-02-11\", \"mobileNumber\": \"01033404018\"}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:4200/api/v1/user/UpdateAccount",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "4200",
+							"path": [
+								"api",
+								"v1",
+								"user",
+								"UpdateAccount"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete account",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NWYxMWU3MTE2YThjN2VkMTEzN2EyMmEiLCJpYXQiOjE3MTAzMDA5MTIsImV4cCI6MTcxMDMwNDUxMn0.U-63QTB1SAUmB95ndvBmjzwSP6Qfp5QY215lvR1Q4Fw",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:4200/api/v1/user/DeleteAccount",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "4200",
+							"path": [
+								"api",
+								"v1",
+								"user",
+								"DeleteAccount"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get user data",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NWYxMWU3MTE2YThjN2VkMTEzN2EyMmEiLCJpYXQiOjE3MTAzMDA5MTIsImV4cCI6MTcxMDMwNDUxMn0.U-63QTB1SAUmB95ndvBmjzwSP6Qfp5QY215lvR1Q4Fw",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:4200/api/v1/user/UserData",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "4200",
+							"path": [
+								"api",
+								"v1",
+								"user",
+								"UserData"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get another user data",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NWRiZDQ4MzM3YWU4Y2IzNTJjN2Q4OWEiLCJpYXQiOjE3MTA0MjM1MjMsImV4cCI6MTcxMDQyNzEyM30.BFI7Xs2Fm-SdBBc_MXLVF3z47nuQ33fLMB4GVMFvio8",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:4200/api/v1/user/AnotherUserData?_id=65f0ccaa278324e143cc2193",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "4200",
+							"path": [
+								"api",
+								"v1",
+								"user",
+								"AnotherUserData"
+							],
+							"query": [
+								{
+									"key": "_id",
+									"value": "65f0ccaa278324e143cc2193"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Verify email",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:4200/api/v1/user/VerifyEmail/eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NWRjMWY1YmIyMDU5ZWVhYTAyYWI1ZGUiLCJpYXQiOjE3MDg5MjQ3NjN9.OUemgf_NhhIhiQmtLzRMR_C19LtlAQTrKGMUaHfHtoM",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "4200",
+							"path": [
+								"api",
+								"v1",
+								"user",
+								"VerifyEmail",
+								"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NWRjMWY1YmIyMDU5ZWVhYTAyYWI1ZGUiLCJpYXQiOjE3MDg5MjQ3NjN9.OUemgf_NhhIhiQmtLzRMR_C19LtlAQTrKGMUaHfHtoM"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Verify recovery email",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:4200/api/v1/user/VerifyRecoveryEmail/eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NWRjMWY1YmIyMDU5ZWVhYTAyYWI1ZGUiLCJpYXQiOjE3MDg5MjQ3NjN9.OUemgf_NhhIhiQmtLzRMR_C19LtlAQTrKGMUaHfHtoM",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "4200",
+							"path": [
+								"api",
+								"v1",
+								"user",
+								"VerifyRecoveryEmail",
+								"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NWRjMWY1YmIyMDU5ZWVhYTAyYWI1ZGUiLCJpYXQiOjE3MDg5MjQ3NjN9.OUemgf_NhhIhiQmtLzRMR_C19LtlAQTrKGMUaHfHtoM"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update password",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NWRjMWY1YmIyMDU5ZWVhYTAyYWI1ZGUiLCJpYXQiOjE3MTA2MTU1MjYsImV4cCI6MTcxMDYxOTEyNn0.P5syKiWp3-qr2M24vdqYxBHIHmVbmU3Kn85pPNYau2Y",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\"password\": \"nadeenFayez0000@\", \"confirmedPassword\": \"nadeenFayez0000@\"}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:4200/api/v1/user/UpdatePassword",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "4200",
+							"path": [
+								"api",
+								"v1",
+								"user",
+								"UpdatePassword"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Forget password",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\"email\": \"nadeen465@yahoo.com\", \"mobileNumber\": \"01089431478\"}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:4200/api/v1/user/ForgetPassword",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "4200",
+							"path": [
+								"api",
+								"v1",
+								"user",
+								"ForgetPassword"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Reset password",
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\"email\": \"nadeen465@yahoo.com\", \"mobileNumber\": \"01089431478\", \"OTP_user\": \"osm8KgvL@k0VIBY\", \"newPassword\": \"nouraDawood0000@\", \"confirmedNewPassword\": \"nouraDawood0000@\"}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:4200/api/v1/user/ResetPassword",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "4200",
+							"path": [
+								"api",
+								"v1",
+								"user",
+								"ResetPassword"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get accounts associated to a recovery email",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NWRiZDQ4MzM3YWU4Y2IzNTJjN2Q4OWEiLCJpYXQiOjE3MTAzNjE2OTIsImV4cCI6MTcxMDM2NTI5Mn0.YToF_xk8QXr3_12Qp8re3kGs9moYuoWXSqxv2XyFnvQ",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\"recoveryEmail\": \"nadeen465@yahoo.com\"}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:4200/api/v1/user/Accounts_recoverymail",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "4200",
+							"path": [
+								"api",
+								"v1",
+								"user",
+								"Accounts_recoverymail"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Company",
+			"item": [
+				{
+					"name": "Add company",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NWRjMWY1YmIyMDU5ZWVhYTAyYWI1ZGUiLCJpYXQiOjE3MDk5MjY1MjQsImV4cCI6MTcwOTkzMDEyNH0.1aSSX1QXgdG-aLgbpUzUEwJoTLWsBUQpv1Kwj5b0PUs",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\"companyName\": \"Apple \", \"description\": \"Electronics and mobile phones services.\", \"industry\": \"Technology\", \"address\": \"Ahmed Lotfy st, New Cairo, Egypt.\", \"numberOfEmployees\": 20, \"companyEmail\": \"nadeenmoubarak671@gmail.com\"}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:4200/api/v1/Company/AddCompany",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "4200",
+							"path": [
+								"api",
+								"v1",
+								"Company",
+								"AddCompany"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update company",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NWRjMWY1YmIyMDU5ZWVhYTAyYWI1ZGUiLCJpYXQiOjE3MDk5NTAxMDQsImV4cCI6MTcwOTk1MzcwNH0.LqXpIuxMb6GBdpdcr4NTn0lCOlAQZFba5ybY81pijHc",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\"_id\": \"65eb6ab532b28e25aee2167a\", \"companyName\": \" The  Weekend \", \"industry\": \"Musical\", \"numberOfEmployees\": 17, \"companyEmail\": \"nmoubarak@student.eelu.edu.eg\"}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:4200/api/v1/Company/UpdateCompany",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "4200",
+							"path": [
+								"api",
+								"v1",
+								"Company",
+								"UpdateCompany"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete company",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NWRjMWY1YmIyMDU5ZWVhYTAyYWI1ZGUiLCJpYXQiOjE3MDk5MjY1MjQsImV4cCI6MTcwOTkzMDEyNH0.1aSSX1QXgdG-aLgbpUzUEwJoTLWsBUQpv1Kwj5b0PUs",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\"_id\": \"65e932e358ab6b7fadc21298\"}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:4200/api/v1/Company/DeleteCompany",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "4200",
+							"path": [
+								"api",
+								"v1",
+								"Company",
+								"DeleteCompany"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get company data",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NWRiZDQ4MzM3YWU4Y2IzNTJjN2Q4OWEiLCJpYXQiOjE3MTA1MTU2OTksImV4cCI6MTcxMDUxOTI5OX0.VO5_k-3htSj4K6BM6ol1DVAMioal1TJJlZKahc_J6B0",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:4200/api/v1/Company/CompanyData/65dc1c6cf532c6f79c293ef5",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "4200",
+							"path": [
+								"api",
+								"v1",
+								"Company",
+								"CompanyData",
+								"65dc1c6cf532c6f79c293ef5"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Verify company email",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:4200/api/v1/Company/VerifyCompanyEmail/eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJjb21wYW55SWQiOiI2NWRjMWM2Y2Y1MzJjNmY3OWMyOTNlZjUiLCJpYXQiOjE3MDg5MjQwMTJ9.wk9hEthjmqoyumXSHVDq8v_gpch4O1G5luXmg9_JcNY",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "4200",
+							"path": [
+								"api",
+								"v1",
+								"Company",
+								"VerifyCompanyEmail",
+								"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJjb21wYW55SWQiOiI2NWRjMWM2Y2Y1MzJjNmY3OWMyOTNlZjUiLCJpYXQiOjE3MDg5MjQwMTJ9.wk9hEthjmqoyumXSHVDq8v_gpch4O1G5luXmg9_JcNY"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Search company with name",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NWRiZDQ4MzM3YWU4Y2IzNTJjN2Q4OWEiLCJpYXQiOjE3MTA1OTU1MjksImV4cCI6MTcxMDU5OTEyOX0.rYIVSSHHl9-i80S2TQxnP88Mt3gscxQ_92zj127nrK4",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\"name\": \"pPLE\"}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:4200/api/v1/Company/CompanySearch_name",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "4200",
+							"path": [
+								"api",
+								"v1",
+								"Company",
+								"CompanySearch_name"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get applications for specific jobs",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NWRiZDQ4MzM3YWU4Y2IzNTJjN2Q4OWEiLCJpYXQiOjE3MTA2MjgxNzcsImV4cCI6MTcxMDYzMTc3N30.oLKR2oc6nwUOLH17dcdEypkOODE7kPCGw5tNnrl8ZPk",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\"jobId\": \"65ebafe6431d808d77e6d70f\"}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:4200/api/v1/Company/Applications_specificjobs",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "4200",
+							"path": [
+								"api",
+								"v1",
+								"Company",
+								"Applications_specificjobs"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Job",
+			"item": [
+				{
+					"name": "Add job",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NWRjMWY1YmIyMDU5ZWVhYTAyYWI1ZGUiLCJpYXQiOjE3MTA2MjgxMTAsImV4cCI6MTcxMDYzMTcxMH0.QSMZskdTLotLQas2XlVDD6SFDtabkViCkLC_9Nbz4KE",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\"jobTitle\": \"NodeJs back-end developer\", \"jobLocation\": \"onsite\", \"workingTime\": \"part-time\", \"seniorityLevel\": \"CTO\", \"jobDescription\": \"Creating APIs to handle user requests on web.\", \"technicalSkills\": [\"Nodejs\", \"JavaScript\", \"TypeScript\"], \"softSkills\": [\"Time management\", \"team worker\"], \"companyId\": \"65dc2512f1e140d72a84f495\"}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:4200/api/v1/job/AddJob",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "4200",
+							"path": [
+								"api",
+								"v1",
+								"job",
+								"AddJob"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update job",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NWRiZDQ4MzM3YWU4Y2IzNTJjN2Q4OWEiLCJpYXQiOjE3MDk5NDgyMDksImV4cCI6MTcwOTk1MTgwOX0.oXzg9V8XRjAb2SGu5FdIyvC9m8uHti7i5N4NZMMp8Kc",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\"_id\": \"65ebafe6431d808d77e6d70f\", \"technicalSkills\": [\"Joi\", \"mUlter\"], \"jobTitle\": \"PHP back-end developer\"}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:4200/api/v1/job/UpdateJob",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "4200",
+							"path": [
+								"api",
+								"v1",
+								"job",
+								"UpdateJob"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete job",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NWRjMWY1YmIyMDU5ZWVhYTAyYWI1ZGUiLCJpYXQiOjE3MDk5NTAxMDQsImV4cCI6MTcwOTk1MzcwNH0.LqXpIuxMb6GBdpdcr4NTn0lCOlAQZFba5ybY81pijHc",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\"_id\": \"65de368cf6d5586128da9585\"}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:4200/api/v1/job/DeleteJob",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "4200",
+							"path": [
+								"api",
+								"v1",
+								"job",
+								"DeleteJob"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get jobs with their company’s info",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NWRiZDQ4MzM3YWU4Y2IzNTJjN2Q4OWEiLCJpYXQiOjE3MTA2MjgxNzcsImV4cCI6MTcxMDYzMTc3N30.oLKR2oc6nwUOLH17dcdEypkOODE7kPCGw5tNnrl8ZPk",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:4200/api/v1/job/Jobs_companies",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "4200",
+							"path": [
+								"api",
+								"v1",
+								"job",
+								"Jobs_companies"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Apply to job",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NWYwY2NhYTI3ODMyNGUxNDNjYzIxOTMiLCJpYXQiOjE3MTA2NDcxMDksImV4cCI6MTcxMDY1MDcwOX0.Yjw_XZfWgjqT774mBkE4P0kze6LqWN_CzzarZpzAATw",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "jobId",
+									"value": "65ebafe6431d808d77e6d70f",
+									"type": "text"
+								},
+								{
+									"key": "userTechSkills[0]",
+									"value": "Ruby",
+									"type": "text"
+								},
+								{
+									"key": "userSoftSkills[0]",
+									"value": "Socializing",
+									"contentType": "",
+									"type": "text"
+								},
+								{
+									"key": "userResume",
+									"type": "file",
+									"src": "/C:/Users/AT Once/Downloads/pledge4m.pdf"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:4200/api/v1/job/ApplyJob",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "4200",
+							"path": [
+								"api",
+								"v1",
+								"job",
+								"ApplyJob"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get jobs for a specific company",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NWRiZDQ4MzM3YWU4Y2IzNTJjN2Q4OWEiLCJpYXQiOjE3MDk5NTA4MzksImV4cCI6MTcwOTk1NDQzOX0.HTJPKvZLw73WAPqmXxRYjTmXJVmstL6WNpRtBbxnxI4",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:4200/api/v1/job/Jobs_specificcompany?companyName=Apple",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "4200",
+							"path": [
+								"api",
+								"v1",
+								"job",
+								"Jobs_specificcompany"
+							],
+							"query": [
+								{
+									"key": "companyName",
+									"value": "Apple"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get filtered jobs",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NWRjMWY1YmIyMDU5ZWVhYTAyYWI1ZGUiLCJpYXQiOjE3MTAwNzkxNjYsImV4cCI6MTcxMDA4Mjc2Nn0.N_aV-1Sb-ehh6RBbesU3Tf7RnEUMA2XoLIBkEQaRzW4",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\"jobTitle\": \"NodeJs back-end developer\", \"workingTime\": \"part-time\", \"jobLocation\": \"remotely\", \"seniorityLevel\": \"Senior\"}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:4200/api/v1/job/FilteredJobs",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "4200",
+							"path": [
+								"api",
+								"v1",
+								"job",
+								"FilteredJobs"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Application",
+			"item": [
+				{
+					"name": "Get applications for a specific company on a specific day as Excel file",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NWRjMWY1YmIyMDU5ZWVhYTAyYWI1ZGUiLCJpYXQiOjE3MTA2MzIyMTEsImV4cCI6MTcxMDYzNTgxMX0.GlGo1w1GNj5E5w0pK38JWZI34jK4LN_PAzJZGa43LjA",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:4200/api/v1/application/Applications_specificcompany_excel?companyName=AUC&date=2024-03-14",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "4200",
+							"path": [
+								"api",
+								"v1",
+								"application",
+								"Applications_specificcompany_excel"
+							],
+							"query": [
+								{
+									"key": "companyName",
+									"value": "AUC"
+								},
+								{
+									"key": "date",
+									"value": "2024-03-14"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
