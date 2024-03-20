@@ -1,5 +1,5 @@
 # job-search-app-nodejs
-This particular app describes searching for a job that is relevant to their domain or area of interest.
+This particular Node.js app is to help users search for jobs that are relevant to their domain or area of interest, and it also helps companies in the hiring process.
 
 <h1>Features of Job Search App:</h1>
 <ul>
@@ -11,7 +11,7 @@ This particular app describes searching for a job that is relevant to their dom
 
 <h1>Collections</h1>
 
-<h3>User Collection</h3>
+<h3><i>User Collection</i></h3>
 <ol>
   <li>_id</li>
   <li>firstName</li>
@@ -178,8 +178,8 @@ This particular app describes searching for a job that is relevant to their dom
     <ul>
       <li>Allow user to filter with workingTime, jobLocation, seniorityLevel, jobTitle, and technicalSkills</li>
       <dl>
-      <dt><li>One or more of them should applied</li></dt>
-      <dd><i>Exmaple:</i> If the user selects the <b>workingTime</b> is <b>part-time</b> and the <b>jobLocation</b> is <b>onsite</b>, we return all jobs that match these conditions</dd>
+        <li>One or more of them should applied</li>
+        <dd><i>Exmaple:</i> If the user selects the <b>workingTime</b> is <b>part-time</b> and the <b>jobLocation</b> is <b>onsite</b>, we return all jobs that match these conditions</dd>
       </dl>
       <li>Authorization with the role (User, Company_HR)</li>
     </ul>
