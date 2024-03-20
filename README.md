@@ -179,7 +179,7 @@ This particular Node.js app is to help users search for jobs that are relevant t
       <li>Allow user to filter with workingTime, jobLocation, seniorityLevel, jobTitle, and technicalSkills</li>
       <dl>
         <li>One or more of them should applied</li>
-        <dd><b>Example:</b> If the user selects the <b>workingTime</b> is <b>part-time</b> and the <b>jobLocation</b> is <b>onsite</b>, we return all jobs that match these conditions</dd>
+        <dd><b><i>Example:</i></b> If the user selects the <b>workingTime</b> is <b>part-time</b> and the <b>jobLocation</b> is <b>onsite</b>, we return all jobs that match these conditions</dd>
       </dl>
       <li>Authorization with the role (User, Company_HR)</li>
     </ul>
