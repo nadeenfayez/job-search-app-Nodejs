@@ -84,70 +84,87 @@ This particular Node.js app is to help users search for jobs that are relevant t
   <li><b>Sign up</b></li>
   <li><b>Sign in</b></li>
     <ul>
-      <li>Sign in using (email or mobileNumber) and password</li>
-      <li>Update the status to online after signing in</li>
+      <li>Sign in using (email or mobileNumber) and password.</li>
+      <li>Update the status to online after signing in.</li>
     </ul>
   <li><b>Verify email</b></li>
   <li><b>Verify recovery email</b></li>
   <li><b>Update account</b></li>
     <ul>
-      <li>You can update (email, mobileNumber, recoveryEmail, DOB, lastName, firstName)</li>
-      <li>If user update the email or mobileNumber, the new data doesn’t conflict with any existing data in the database</li>
-      <li>User must be logged in</li>
-      <li>Only the owner of the account can update his/her account data</li>
+      <li>You can update (email, mobileNumber, recoveryEmail, DOB, lastName, firstName).</li>
+      <li>If user update the email or mobileNumber, the new data doesn’t conflict with any existing data in the database.</li>
+      <li>User must be logged in.</li>
+      <li>Only the owner of the account can update his/her account data.</li>
     </ul>
   <li><b>Delete account</b></li>
     <ul>
-      <li>Only the owner of the account can delete his/her account data</li>
-      <li>User must be logged in</li>
+      <li>Only the owner of the account can delete his/her account data.</li>
+      <li>User must be logged in.</li>
     </ul>
   <li><b>Get user account data</b></li>
     <ul>
-      <li>Only the owner of the account can delete his/her account data</li>
-      <li>User must be logged in</li>
+      <li>Only the owner of the account can get his/her account data.</li>
+      <li>User must be logged in.</li>
     </ul>
   <li><b>Get profile data for another user</b></li>
     <ul>
-      <li><b>Send the userId in params or query</b></li>
+      <li>Send the userId in params or query.</li>
+      <li>User must be logged in.</li>
+      <li>Authorization with the role (Company_HR and User).</li>
     </ul>
   <li><b>Update password</b></li>
-  <li><b>Reset password</b></li>
+    <ul>
+      <li>User must be logged in.</li>
+      <li>Authorization with the role (Company_HR and User).</li>
+    </ul>
   <li><b>Forget password</b> (without sending any email, making sure of data security specially the OTP and the newPassword)</li>
+  <li><b>Reset password</b></li>
   <li><b>Get all accounts associated to a specific recovery email</b></li>
+    <ul>
+      <li>User must be logged in.</li>
+      <li>Authorization with role (Company_HR).</li>
+    </ul>
 </ol>
 
 <h1>Company APIs</h1>
 <ol>
   <li><b>Add company</b></li>
     <ul>
-      <li>Authorization with role (Company_HR)</li>
+      <li>User must be logged in.</li>
+      <li>Authorization with role (Company_HR).</li>
     </ul>
   <li><b>Verify company email</b></li>
   <li><b>Update company data</b></li>
     <ul>
-      <li>Only the company owner can update the data</li>
-      <li>Authorization with role (Company_HR)</li>
+      <li>Only the company owner can update the data.</li>
+      <li>User must be logged in.</li>
+      <li>Authorization with role (Company_HR).</li>
     </ul>
   <li><b>Delete company data</b></li>
     <ul>
-      <li>Only the company owner can delete the data</li>
-      <li>Authorization with role (Company_HR)</li>
+      <li>Only the company owner can delete the data.</li>
+      <li>User must be logged in.</li>
+      <li>Authorization with role (Company_HR).</li>
     </ul>
   <li><b>Get company data</b></li>
     <ul>
-      <li>Send the companyId in params to get the desired company data</li>
-      <li>Return all jobs related to this company</li>
-      <li>Authorization with role (Company_HR)</li>
+      <li>Send the companyId in params to get the desired company data.</li>
+      <li>Return all jobs related to this company.</li>
+      <li>Only the company owner can get this data.</li>
+      <li>User must be logged in.</li>
+      <li>Authorization with role (Company_HR).</li>
     </ul>
-  <li><b>Search for a company with a name</b></li>
+  <li><b>Search for a company with the name</b></li>
     <ul>
-      <li>Authorization with the role (Company_HR and User)</li>
+      <li>User must be logged in.</li>
+      <li>Authorization with the role (Company_HR and User).</li>
     </ul>
   <li><b>Get all applications for specific jobs</b></li>
     <ul>
-      <li>Each company owner can only take a look at the applications for his job; he has no access to other companies’ applications</li>
-      <li>Return each application with the user data, not the userId</li>
-      <li>Authorization with role (Company_HR)</li>
+      <li>Each company owner can only take a look at the applications for his job; he has no access to other companies’ applications.</li>
+      <li>User must be logged in.</li>
+      <li>Return each application with the user data, not the userId.</li>
+      <li>Authorization with role (Company_HR).</li>
     </ul>
 </ol>
 
@@ -155,38 +172,45 @@ This particular Node.js app is to help users search for jobs that are relevant t
 <ol>
   <li><b>Add job</b></li>
     <ul>
-      <li>Authorization with the role (Company_HR)</li>
+      <li>User must be logged in.</li>
+      <li>Authorization with the role (Company_HR).</li>
     </ul>
   <li><b>Update job</b></li>
     <ul>
-      <li>Authorization with the role (Company_HR)</li>
+      <li>User must be logged in.</li>
+      <li>Authorization with the role (Company_HR).</li>
     </ul>
   <li><b>Delete job</b></li>
     <ul>
-      <li>Authorization with the role (Company_HR)</li>
+      <li>User must be logged in.</li>
+      <li>Authorization with the role (Company_HR).</li>
     </ul>
   <li><b>Get all jobs with their company’s information</b></li>
     <ul>
-      <li>Authorization with the role (User, Company_HR)</li>
+      <li>User must be logged in.</li>
+      <li>Authorization with the role (User, Company_HR).</li>
     </ul>
   <li><b>Get all jobs for a specific company</b></li>
     <ul>
-      <li>Authorization with the role (User, Company_HR)</li>
-      <li>Send the company name in the query and get this company jobs</li>
+      <li>User must be logged in.</li>
+      <li>Authorization with the role (User, Company_HR).</li>
+      <li>Send the company name in the query and get this company jobs.</li>
     </ul>
   <li><b>Get all jobs that match the following filters</b></li>
     <ul>
-      <li>Allow user to filter with workingTime, jobLocation, seniorityLevel, jobTitle, and technicalSkills</li>
+      <li>Allow user to filter with workingTime, jobLocation, seniorityLevel, jobTitle, and technicalSkills.</li>
+      <li>User must be logged in.</li>
       <dl>
-        <li>One or more of them should applied</li>
-        <dd><b><i>Example:</i></b> If the user selects the <b>workingTime</b> is <b>part-time</b> and the <b>jobLocation</b> is <b>onsite</b>, we return all jobs that match these conditions</dd>
+        <li>One or more of them should applied.</li>
+        <dd><b><i>Example:</i></b> If the user selects the <b>workingTime</b> is <b>part-time</b> and the <b>jobLocation</b> is <b>onsite</b>, we return all jobs that match these conditions.</dd>
       </dl>
-      <li>Authorization with the role (User, Company_HR)</li>
+      <li>Authorization with the role (User, Company_HR).</li>
     </ul>
   <li><b>Apply to job</b></li>
     <ul>
-      <li>This API will add a new document in the application collection with the new data</li>
-      <li>Authorization with the role (User)</li>
+      <li>This API will add a new document in the application collection with the new data.</li>
+      <li>User must be logged in.</li>
+      <li>Authorization with the role (User).</li>
     </ul>
 </ol>
 
@@ -194,8 +218,9 @@ This particular Node.js app is to help users search for jobs that are relevant t
 <ol>
   <li><b>Collect applications</b></li>
     <ul>
-      <li>An endpoint that collects the applications for a specific company on a specific day and create an Excel sheet with this data</li>
-      <li>Authorization with role (Company_HR)</li>
+      <li>An endpoint that collects the applications for a specific company on a specific day and create an Excel sheet with this data.</li>
+      <li>User must be logged in.</li>
+      <li>Authorization with role (Company_HR).</li>
     </ul>
 </ol>
 
